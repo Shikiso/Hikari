@@ -64,13 +64,6 @@ async def ban(member):
 async def on_ready():
     print(f'Logged in as {bot.user.name} ({bot.user.id})')
 
-# Command handler for the 'ping' command
-@bot.command()
-async def ping(ctx):
-    """Responds with 'Pong!' and the bot's latency."""
-    latency = round(bot.latency * 1000) # Latency in milliseconds
-    await ctx.send(f'Pong! {latency}ms')
-
 @bot.command()
 async def slots(ctx, member:discord.Member):
     await ctx.send(f"{member.mention} has been chosen for Slots!\nThree hits in a row and they survive!")
